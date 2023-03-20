@@ -10,6 +10,15 @@ def encoder(password):
         emp_str += b
     return emp_str
 
+def decoder(encoded_password):
+    password = ""
+    for i in range(len(encoded_password)):
+        a = int(encoded_password[i])
+        b = a + 3
+        b = str(b)
+        password += b
+    return password
+
 def main():
     while True:
         print_menu()
